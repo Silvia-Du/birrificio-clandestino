@@ -17,7 +17,7 @@
                 <p>{{ $beer->gluteen_free ? 'Birra gluten free': 'Birra con glutine' }}</p>
 
                 <a href="{{ route('beers.index') }}" type="button" class="btn btn-primary">Back to list</a>
-                <a href="#" type="button" class="btn btn-warning">edit</a>
+                <a href="{{ route('beers.edit', $beer) }}" type="button" class="btn btn-warning">edit</a>
             </div>
             <div class="col-6 debug">
                 <img class="img-fluid" src="{{ $beer->image}}" alt="{{ $beer->name }}">
