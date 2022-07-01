@@ -25,7 +25,7 @@ class BeerCrudController extends Controller
      */
     public function create()
     {
-        //
+        return view('beer.create');
     }
 
     /**

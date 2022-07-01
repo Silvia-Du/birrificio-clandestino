@@ -11,7 +11,7 @@
                 <a class="nav-link" href="{{ route('beers.index') }}">Elenco Birre</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Crea Birra</a>
+                <a class="nav-link" href="{{ route('beers.create') }}">Crea Birra</a>
               </li>
 
             </ul>
