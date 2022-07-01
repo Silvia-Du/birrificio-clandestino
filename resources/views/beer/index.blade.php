@@ -2,6 +2,13 @@
 
 @section('content')
    <div class="container">
+
+    @if(session('prodotto_cancellato'))
+        <div class="alert alert-success" role="alert">
+            {{ session('prodotto_cancellato') }}
+        </div>
+    @endif
+
     <table class="table">
         <thead>
           <tr>
@@ -12,13 +19,19 @@
         </thead>
         <tbody>
          @foreach ($beers as $beer)
+
+
          <tr>
             <th scope="row">{{ $beer->id }}</th>
             <td>{{ $beer->name }}</td>
             <td>
                 <a class="btn btn-primary" href="  {{ route('beers.show', $beer) }}">Show</a>
                 <a class="btn btn-success" href="{{ route('beers.edit', $beer) }}">Edit</a>
-                <a class="btn btn-danger" href="">Delete</a>
+                <form class="d-inline" action="{{ route('beers.destroy', $beer) }}" method="POST" onsubmit="return confirm('Confermi di voler eliminare {{ $beer->name }} ?')">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Elimina</button>
+                </form>
             </td>
 
           </tr>
