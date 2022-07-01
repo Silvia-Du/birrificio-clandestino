@@ -16,7 +16,7 @@
             <th scope="row">{{ $beer->id }}</th>
             <td>{{ $beer->name }}</td>
             <td>
-                <a class="btn btn-primary" href="">Show</a>
+                <a class="btn btn-primary" href="  {{ route('beers.show', $beer) }}">Show</a>
                 <a class="btn btn-success" href="">Edit</a>
                 <a class="btn btn-danger" href="">Delete</a>
             </td>

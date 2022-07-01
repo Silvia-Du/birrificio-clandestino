@@ -47,7 +47,8 @@ class BeerCrudController extends Controller
      */
     public function show($id)
     {
-        //
+        $beer = Beer::find($id);
+        return view('beer.show', compact('beer'));
     }
 
     /**
