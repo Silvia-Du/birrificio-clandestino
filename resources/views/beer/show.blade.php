@@ -20,7 +20,7 @@
                 <a href="#" type="button" class="btn btn-warning">edit</a>
             </div>
             <div class="col-6 debug">
-                <img src="{{ $beer->image}}" alt="{{ $beer->name }}">
+                <img class="img-fluid" src="{{ $beer->image}}" alt="{{ $beer->name }}">
             </div>
 
         </div>
