@@ -2,6 +2,13 @@
 
 @section('content')
    <div class="container">
+
+    @if(session('prodotto_cancellato'))
+        <div class="alert alert-success" role="alert">
+            {{ session('prodotto_cancellato') }}
+        </div>
+    @endif
+
     <table class="table">
         <thead>
           <tr>
@@ -12,6 +19,8 @@
         </thead>
         <tbody>
          @foreach ($beers as $beer)
+
+
          <tr>
             <th scope="row">{{ $beer->id }}</th>
             <td>{{ $beer->name }}</td>

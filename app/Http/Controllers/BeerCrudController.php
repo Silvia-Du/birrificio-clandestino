@@ -112,6 +112,6 @@ class BeerCrudController extends Controller
     {
         $beer->delete();
 
-        return redirect()->route('beers.index');
+        return redirect()->route('beers.index')->with('prodotto_cancellato', "La Birra $beer->name è stata eliminata correttamente");
     }
 }
