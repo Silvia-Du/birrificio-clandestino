@@ -22,7 +22,7 @@ class BeersTableSeeder extends Seeder
             $new_beer->type = $faker->word();
             $new_beer->alcohol_content = $faker->numberBetween(0, 68);
             $new_beer->description = $faker->paragraph();
-            $new_beer->image = $faker->imageUrl(null, 640, 480);
+            $new_beer->image = 'https://www.eatthis.com/wp-content/uploads/sites/4/2021/06/popular-beers-taste-test.jpg?quality=82&strip=1';
             $new_beer->hops = $faker->numberBetween(0, 10);
             $new_beer->gluteen_free = $faker->boolean();
 
