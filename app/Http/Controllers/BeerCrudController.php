@@ -25,7 +25,7 @@ class BeerCrudController extends Controller
      */
     public function create()
     {
-        //
+        return view('beer.create');
     }
 
     /**
@@ -37,6 +37,14 @@ class BeerCrudController extends Controller
     public function store(Request $request)
     {
         //
+
+        $data = $request->all();
+
+        dd($data);
+
+        // creare dati fillabili nel model
+        // salvare nel db il contenuto della request
+        // reindirizzare alla show del nuovo elemento creato
     }
 
     /**
