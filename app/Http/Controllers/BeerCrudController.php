@@ -40,11 +40,22 @@ class BeerCrudController extends Controller
 
         $data = $request->all();
 
-        dd($data);
+        // dd($data);
 
         // creare dati fillabili nel model
         // salvare nel db il contenuto della request
         // reindirizzare alla show del nuovo elemento creato
+
+        $new_beer = new Beer();
+        $new_beer-> fill($data);
+
+        $new_beer->save();
+
+        return redirect()->route('beers.show', $new_beer);
+
+
+
+
     }
 
     /**
