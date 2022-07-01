@@ -17,3 +17,5 @@ Route::get('/','PageController@index')->name('home');
 
 
 Route::get('/birre', 'BeerController@index')->name('birre');
+
+Route::resource('beers', 'BeerCrudController');
