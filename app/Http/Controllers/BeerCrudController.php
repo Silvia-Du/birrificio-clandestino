@@ -78,7 +78,9 @@ class BeerCrudController extends Controller
      */
     public function edit($id)
     {
-        //
+        $beer = Beer::find($id);
+
+        return view('beer.edit', compact('beer'));
     }
 
     /**
@@ -88,9 +90,16 @@ class BeerCrudController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Beer $beer)
     {
-        //
+        $data = $request->all();
+
+        $beer->update($data);
+
+        //return route('beers.show', $beer);
+
+        return redirect()->route('beers.show', $beer);
+        
     }
 
     /**
