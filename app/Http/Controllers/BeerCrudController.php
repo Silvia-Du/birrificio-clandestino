@@ -99,7 +99,7 @@ class BeerCrudController extends Controller
         //return route('beers.show', $beer);
 
         return redirect()->route('beers.show', $beer);
-        
+
     }
 
     /**
@@ -108,8 +108,10 @@ class BeerCrudController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Beer $beer)
     {
-        //
+        $beer->delete();
+
+        return redirect()->route('beers.index');
     }
 }

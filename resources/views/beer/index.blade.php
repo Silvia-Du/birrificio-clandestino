@@ -18,7 +18,11 @@
             <td>
                 <a class="btn btn-primary" href="  {{ route('beers.show', $beer) }}">Show</a>
                 <a class="btn btn-success" href="{{ route('beers.edit', $beer) }}">Edit</a>
-                <a class="btn btn-danger" href="">Delete</a>
+                <form class="d-inline" action="{{ route('beers.destroy', $beer) }}" method="POST" onsubmit="return confirm('Confermi di voler eliminare {{ $beer->name }} ?')">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Elimina</button>
+                </form>
             </td>
 
           </tr>
