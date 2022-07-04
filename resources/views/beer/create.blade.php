@@ -34,7 +34,7 @@
                         value="{{old("name")}}"
                         id="name">
                         @error("name")
-                            <p>{{$message}}</p>
+                            <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
 
@@ -47,7 +47,7 @@
                             value="{{old("company")}}"
                             id="company">
                             @error("company")
-                                <p>{{$message}}</p>
+                                <p class="text-danger">{{$message}}</p>
                             @enderror
                     </div>
 
@@ -60,7 +60,7 @@
                             value="{{old("type")}}"
                             id="type">
                             @error("type")
-                                <p>{{$message}}</p>
+                                <p class="text-danger">{{$message}}</p>
                             @enderror
                     </div>
 
@@ -73,7 +73,7 @@
                             value="{{old("alcohol_content")}}"
                             id="alcohol_content">
                             @error("alcohol_content")
-                                <p>{{$message}}</p>
+                                <p class="text-danger">{{$message}}</p>
                             @enderror
                     </div>
 
@@ -85,7 +85,7 @@
                             id="description">{{old("alcohol_content")}}
                         </textarea>
                         @error("description")
-                            <p>{{$message}}</p>
+                            <p class="text-danger">{{$message}}</p>
                         @enderror
                     </div>
 
@@ -108,7 +108,7 @@
                             class="form-control @error("hops") is-invalid @enderror"
                             id="hops">
                             @error("hops")
-                                <p>{{$message}}</p>
+                                <p class="text-danger">{{$message}}</p>
                             @enderror
                     </div>
 
