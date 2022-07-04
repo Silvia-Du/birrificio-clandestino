@@ -69,7 +69,7 @@
                         <input
                             type="number"
                             name="alcohol_content"
-                            class="form-control @error("company") is-invalid @enderror"
+                            class="form-control @error("alcohol_content") is-invalid @enderror"
                             value="{{old("alcohol_content")}}"
                             id="alcohol_content">
                             {{-- In produzione andrebbe messo il campo "required". --}}
@@ -82,8 +82,8 @@
                         <label for="description" class="form-label"> description*</label>
                         <textarea
                             name="description"
-                            class="form-control @error("company") is-invalid @enderror"
-                            id="description">{{old("alcohol_content")}}
+                            class="form-control @error("description") is-invalid @enderror"
+                            id="description">{{old("description")}}
                         </textarea>
                         @error("description")
                             <p class="text-danger">{{$message}}</p>
@@ -103,7 +103,7 @@
                     <div class="mb-3">
                         <label for="hops" class="form-label">hops</label>
                         <input
-                            value="{{old("alcohol_content", 0)}}"
+                            value="{{old("hops", 0)}}"
                             type="number"
                             name="hops"
                             class="form-control @error("hops") is-invalid @enderror"
