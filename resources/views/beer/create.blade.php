@@ -31,6 +31,7 @@
                         class="form-control @error("name")
                             is-invalid
                         @enderror"
+                        value="{{old("name")}}"
                         id="name">
                         @error("name")
                             <p>{{$message}}</p>
@@ -43,6 +44,7 @@
                             type="text"
                             name="company"
                             class="form-control @error("company") is-invalid @enderror"
+                            value="{{old("company")}}"
                             id="company">
                             @error("company")
                                 <p>{{$message}}</p>
@@ -55,6 +57,7 @@
                             type="text"
                             name="type"
                             class="form-control @error("type") is-invalid @enderror"
+                            value="{{old("type")}}"
                             id="type">
                             @error("type")
                                 <p>{{$message}}</p>
@@ -67,6 +70,7 @@
                             type="number"
                             name="alcohol_content"
                             class="form-control @error("company") is-invalid @enderror"
+                            value="{{old("alcohol_content")}}"
                             id="alcohol_content">
                             @error("alcohol_content")
                                 <p>{{$message}}</p>
@@ -78,7 +82,7 @@
                         <textarea
                             name="description"
                             class="form-control @error("company") is-invalid @enderror"
-                            id="description">
+                            id="description">{{old("alcohol_content")}}
                         </textarea>
                         @error("description")
                             <p>{{$message}}</p>
@@ -87,13 +91,18 @@
 
                     <div class="mb-3">
                         <label for="image" class="form-label">image</label>
-                        <input type="text" name="image" class="form-control" id="image">
+                        <input
+                            type="text"
+                            name="image"
+                            class="form-control"
+                            value="{{old("image")}}"
+                            id="image">
                     </div>
 
                     <div class="mb-3">
                         <label for="hops" class="form-label">hops</label>
                         <input
-                            value="0"
+                            value="{{old("alcohol_content", 0)}}"
                             type="number"
                             name="hops"
                             class="form-control @error("hops") is-invalid @enderror"
