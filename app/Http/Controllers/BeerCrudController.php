@@ -37,6 +37,14 @@ class BeerCrudController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            "name" => "required|max:255|min:3",
+            "company" => "required|max:255|min:3",
+            "type" => "required|max:255|min:3",
+            "alcohol_content" => "required|max:100|min:0",
+            "description" => "required|min:10",
+            "hops" => "numeric"
+        ]);
 
         $data = $request->all();
 
