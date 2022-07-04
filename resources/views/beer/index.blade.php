@@ -4,7 +4,7 @@
    <div class="container">
 
     @if(session('prodotto_cancellato'))
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success">
             {{ session('prodotto_cancellato') }}
         </div>
     @endif

@@ -14,7 +14,7 @@ class BeerCrudController extends Controller
      */
     public function index()
     {
-        $beers = Beer::all();
+        $beers = Beer::orderBy('id', 'desc')->get();
         return view('beer.index', compact('beers'));
     }
 
