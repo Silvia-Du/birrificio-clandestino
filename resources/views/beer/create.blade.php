@@ -72,6 +72,7 @@
                             class="form-control @error("company") is-invalid @enderror"
                             value="{{old("alcohol_content")}}"
                             id="alcohol_content">
+                            {{-- In produzione andrebbe messo il campo "required". --}}
                             @error("alcohol_content")
                                 <p class="text-danger">{{$message}}</p>
                             @enderror
